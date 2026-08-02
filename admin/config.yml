@@ -54,7 +54,7 @@ collections:
           - label: "Cabinet Series"
             name: "series_list"
             widget: "list"
-            summary: "Série: {{fields.series_name}}"
+            summary: "Series: {{fields.series_name}}"
             fields:
               - { label: "Series Name", name: "series_name", widget: "string", hint: "Ex: Shaker Series" }
               
