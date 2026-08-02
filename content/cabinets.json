@@ -13,6 +13,61 @@
       "pricePerFoot": 180,
       "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Origami-White_1.png",
       "alt": "Shaker Origami White Cabinet from Shaker Series"
+    },
+    {
+      "name": "Shaker Gray",
+      "series": "Shaker Series",
+      "alt": "Shaker Gray Cabinet from Shaker Series",
+      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Gray-SG_1.png",
+      "pricePerFoot": 180
+    },
+    {
+      "name": "Shaker Pebble Gray",
+      "alt": "Shaker Pebble Gray Cabinet from Shaker Series",
+      "series": "Shaker Series",
+      "pricePerFoot": 195
+    },
+    {
+      "name": "Shaker Natural Wood",
+      "alt": "Shaker Natural Wood Cabinet from Shaker Series",
+      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Natural-Wood-SNW_1.png",
+      "pricePerFoot": 210,
+      "series": "Shaker Series"
+    },
+    {
+      "name": "Shaker Charcoal Black",
+      "pricePerFoot": 225,
+      "alt": "Shaker Charcoal Black Cabinet from Shaker Series",
+      "series": "Shaker Series",
+      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Charcoal-Black-CB_1.png"
+    },
+    {
+      "name": "Shaker Jade Green",
+      "alt": "Shaker Jade Green Cabinet from Shaker Series",
+      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/SJG-224x396.jpg",
+      "pricePerFoot": 225,
+      "series": "Shaker Series"
+    },
+    {
+      "name": "Shaker Cotton Oak",
+      "alt": "Shaker Cotton Oak Cabinet from Shaker Series",
+      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/SCO-door-image.png",
+      "pricePerFoot": 225,
+      "series": "Shaker Series"
+    },
+    {
+      "name": "Inset Origami White",
+      "alt": "Inset Origami White Cabinet from Inset Series",
+      "series": "Inset Series",
+      "pricePerFoot": 225,
+      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/inset-origami-white.jpg"
+    },
+    {
+      "name": "Inset Hazelnut Oak",
+      "series": "Inset Series",
+      "pricePerFoot": 225,
+      "alt": "Inset Hazelnut Oak Cabinet from Inset Series",
+      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/IHO---.jpg"
     }
   ]
 }
