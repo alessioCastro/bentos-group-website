@@ -1,0 +1,18 @@
+{
+  "cabinets": [
+    {
+      "name": "Shaker White",
+      "series": "Shaker Series",
+      "pricePerFoot": 180,
+      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-White-SW_1.png",
+      "alt": "Shaker White Cabinet from Shaker Series"
+    },
+    {
+      "name": "Shaker Origami White",
+      "series": "Shaker Series",
+      "pricePerFoot": 180,
+      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Origami-White_1.png",
+      "alt": "Shaker Origami White Cabinet from Shaker Series"
+    }
+  ]
+}
