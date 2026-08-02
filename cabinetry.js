@@ -1,278 +1,32 @@
 /**
  * Cabinet Calculator & Lead Capture Logic
  * Vanilla JavaScript ES6+ implementation focused on performance.
+ * Now fetching dynamic data from Decap CMS (/content/cabinets.json).
  */
 
-// 1. DATA STRUCTURE
-const cabinetModels = [
-    {
-        id: 'sw',
-        name: 'Shaker White',
-        series: 'Shaker Series',
-        pricePerFoot: 180,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-White-SW_1.png'
-    },
-    {
-        id: 'sow',
-        name: 'Shaker Origami White',
-        series: 'Shaker Series',
-        pricePerFoot: 180,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Origami-White_1.png'
-    },
-    {
-        id: 'sg',
-        name: 'Shaker Gray',
-        series: 'Shaker Series',
-        pricePerFoot: 180,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Gray-SG_1.png'
-    },
-    {
-        id: 'spg',
-        name: 'Shaker Pebble Gray',
-        series: 'Shaker Series',
-        pricePerFoot: 195,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Pebble-Gray-PB_1.png'
-    },
-    {
-        id: 'snw',
-        name: 'Shaker Natural Wood',
-        series: 'Shaker Series',
-        pricePerFoot: 210,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Natural-Wood-SNW_1.png'
-    },
-    {
-        id: 'scb',
-        name: 'Shaker Charcoal Black',
-        series: 'Shaker Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Charcoal-Black-CB_1.png'
-    },
-    {
-        id: 'sjg',
-        name: 'Shaker Jade Green',
-        series: 'Shaker Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/SJG-224x396.jpg'
-    },
-    {
-        id: 'sco',
-        name: 'Shaker Cotton Oak',
-        series: 'Shaker Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/SCO-door-image.png'
-    },
-    {
-        id: 'iow',
-        name: 'Inset Origami White',
-        series: 'Inset Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/inset-origami-white.jpg'
-    },
-    {
-        id: 'iho',
-        name: 'Inset Hazelnut Oak',
-        series: 'Inset Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/IHO---.jpg'
-    },
-    {
-        id: 'itb',
-        name: 'Inset Truffle Brown',
-        series: 'Inset Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/inset-truffle-brown.jpg'
-    },
-    {
-        id: 'ew',
-        name: 'Escada White',
-        series: 'Escada Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-White-EW_1.png'
-    },
-    {
-        id: 'ed',
-        name: 'Escada Dove',
-        series: 'Escada Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-Dove-ED_1.png'
-    },
-    {
-        id: 'evw',
-        name: 'Escada Vintage Wood',
-        series: 'Escada Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-Vintage-Wood-EVW_1.png'
-    },
-    {
-        id: 'emb',
-        name: 'Escada Midnight Blue',
-        series: 'Escada Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-Midnight-Blue-EMB_1.png'
-    },
-    {
-        id: 'ehm',
-        name: 'Escada Honey Mapple',
-        series: 'Escada Series',
-        pricePerFoot: 225,
-        image: 'https://roccabinetry.com/media/catalog/category/EHM-Door_1_.png'
-    },
-    {
-        id: 'now',
-        name: 'Newtown Origami White',
-        series: 'Newtown Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/newtown-origami_1.png'
-    },
-    {
-        id: 'nso',
-        name: 'Newtown Smoked Oak',
-        series: 'Newtown Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Newtown-Smoked-Oak-new-offline_1.png'
-    },
-    {
-        id: 'njg',
-        name: 'Newtown Jade Green',
-        series: 'Newtown Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/newtown-jade-green_1.png'
-    },
-    {
-        id: 'ncb',
-        name: 'Newtown Charcoal Black',
-        series: 'Newtown Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/newtown-charcoal-black_1.png'
-    },
-    {
-        id: 'nsg',
-        name: 'Newtown Sage Gray',
-        series: 'Newtown Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/nsg-available.png'
-    },
-    {
-        id: 'nlb',
-        name: 'Newtown Lakeside Blue',
-        series: 'Newtown Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/NLB_1__1_1.png'
-    },
-    {
-        id: 'nco',
-        name: 'Newtown Cotton Oak',
-        series: 'Newtown Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/nco-coming-soon-new.png'
-    },
-    {
-        id: 'bw',
-        name: 'Belmont White',
-        series: 'Belmont Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/belmont-white-feature.png'
-    },
-    {
-        id: 'bg',
-        name: 'Belmont Gray',
-        series: 'Belmont Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/belmont-gray-features_1.png'
-    },
-    {
-        id: 'cw',
-        name: 'Classic White',
-        series: 'Classic Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/classic-white-cw-206x366_1.jpg'
-    },
-    {
-        id: 'cc',
-        name: 'Classic Chocolate',
-        series: 'Classic Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/classic-chocolate-cc-206x366_1.jpg'
-    },
-    {
-        id: 'gw',
-        name: 'Glossy White',
-        series: 'European Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/gw-label-new.png'
-    },
-    {
-        id: 'emw',
-        name: 'Matte White',
-        series: 'European Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/matt-white-label-new.png'
-    },
-    {
-        id: 'emb',
-        name: 'Matte Blue',
-        series: 'European Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/matt-blue-label-new.png'
-    },
-    {
-        id: 'emg',
-        name: 'Matte Gray',
-        series: 'European Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/matt-gray-label-new.png'
-    },
-    {
-        id: 'ew',
-        name: 'Walnut',
-        series: 'European Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/brown-walnut-label-new.png'
-    },
-    {
-        id: 'emcb',
-        name: 'Matte Charcoal Black',
-        series: 'European Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Matte-Charcoal-Black_1.png'
-    },
-    {
-        id: 'csw',
-        name: 'Soft White',
-        series: 'Closet Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/closet-series-white_1.png'
-    },
-    {
-        id: 'cao',
-        name: 'Ashton Oak',
-        series: 'Closet Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/closet-series-wood_1.png'
-    },
-    {
-        id: 'clo',
-        name: 'Slate Oak',
-        series: 'Closet Series',
-        pricePerFoot: 225,
-        image: 'https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/closet-series-grey_1.png'
-    }
-];
+// 1. DYNAMIC DATA HOLDER
+let cabinetModels = [];
+
+// Helper to resolve uploaded image vs external URL
+function resolveCabinetImage(item) {
+    if (!item) return '/assets/img/placeholder.jpg';
+    return item.image || item.image_url || '/assets/img/placeholder.jpg';
+}
 
 // 2. STATE MANAGEMENT
 const state = {
     selectedCabinetId: null,
     linearFeet: 0,
-    activeFilter: 'all' // Novo: Controla qual série está ativa
+    activeFilter: 'all'
 };
 
 // 3. DOM ELEMENTS
 const DOM = {};
 
-// 4. INITIALIZATION
-function init() {
+// 4. INITIALIZATION (Async)
+async function init() {
     DOM.grid = document.getElementById('cabinet-grid');
-    DOM.filtersContainer = document.getElementById('series-filters'); // Novo
+    DOM.filtersContainer = document.getElementById('series-filters');
     DOM.form = document.getElementById('lead-form');
     DOM.linearFeetInput = document.getElementById('linearFeet');
     DOM.phoneInput = document.getElementById('phone');
@@ -282,14 +36,48 @@ function init() {
     DOM.estimateResult = document.getElementById('estimate-result');
     DOM.resetBtn = document.getElementById('reset-btn');
 
-    renderFilterButtons(); // Novo: Cria os botões de filtro
+    // 1. Fetch dynamic data from CMS JSON
+    await loadCabinetsFromCMS();
+
+    // 2. Render UI and set up events
+    renderFilterButtons();
     renderCabinetGrid();
     setupEventListeners();
 }
 
+// FETCH DATA FROM DECAP CMS
+async function loadCabinetsFromCMS() {
+    try {
+        const response = await fetch('/content/cabinets.json');
+        if (!response.ok) throw new Error('Could not fetch cabinets.json');
+
+        const data = await response.json();
+
+        // Map JSON items to match internal structure
+        cabinetModels = (data.cabinets || []).map(item => ({
+            id: item.id && item.id.trim() !== ''
+                ? item.id
+                : item.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+            name: item.name,
+            series: item.series || 'General Series',
+            pricePerFoot: Number(item.pricePerFoot) || 0,
+            image: resolveCabinetImage(item),
+            alt: item.alt || item.name
+        }));
+    } catch (error) {
+        console.error('Error loading cabinet models from CMS:', error);
+        // Display user-friendly error in grid if fetch fails
+        if (DOM.grid) {
+            DOM.grid.innerHTML = '<p class="error-message">Unable to load cabinet styles. Please try again later.</p>';
+        }
+    }
+}
+
 // 5. RENDER FUNCTIONS
 function renderFilterButtons() {
-    // Extrai as séries únicas do array de dados de forma dinâmica
+    if (!cabinetModels.length) return;
+
+    // Extract unique series dynamically
     const uniqueSeries = ['all', ...new Set(cabinetModels.map(m => m.series))];
     DOM.filtersContainer.innerHTML = '';
 
@@ -305,9 +93,11 @@ function renderFilterButtons() {
 
 function renderCabinetGrid() {
     DOM.grid.innerHTML = '';
+
+    if (!cabinetModels.length) return;
+
     const fragment = document.createDocumentFragment();
 
-    // Filtra os modelos com base no filtro ativo do estado
     const filteredModels = state.activeFilter === 'all'
         ? cabinetModels
         : cabinetModels.filter(m => m.series === state.activeFilter);
@@ -317,14 +107,13 @@ function renderCabinetGrid() {
         card.className = 'cabinet-card';
         card.setAttribute('role', 'radio');
 
-        // Mantém o card visualmente selecionado se o ID dele for o selecionado no estado
         const isSelected = state.selectedCabinetId === model.id;
         card.setAttribute('aria-checked', isSelected ? 'true' : 'false');
         card.setAttribute('tabindex', '0');
         card.dataset.id = model.id;
 
         card.innerHTML = `
-            <img src="${model.image}" alt="${model.name} Cabinet Finish" class="cabinet-img" width="400" height="300" loading="lazy">
+            <img src="${model.image}" alt="${model.alt || model.name}" class="cabinet-img" width="400" height="300" loading="lazy">
             <span class="cabinet-series">${model.series}</span>
             <h3 class="cabinet-name">${model.name}</h3>
         `;
@@ -337,13 +126,9 @@ function renderCabinetGrid() {
 
 // 6. EVENT LISTENERS
 function setupEventListeners() {
-    // Clique nos botões de filtro
     DOM.filtersContainer.addEventListener('click', handleFilterSelection);
-
-    // Seleção de armários
     DOM.grid.addEventListener('click', handleCabinetSelection);
 
-    // Acessibilidade do teclado para a grade
     DOM.grid.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -363,12 +148,10 @@ function handleFilterSelection(e) {
 
     state.activeFilter = button.dataset.series;
 
-    // Atualiza a classe ativa nos botões
     DOM.filtersContainer.querySelectorAll('.filter-btn').forEach(btn => {
         btn.classList.toggle('active', btn === button);
     });
 
-    // Renderiza novamente apenas os itens filtrados
     renderCabinetGrid();
 }
 
@@ -378,7 +161,6 @@ function handleCabinetSelection(e) {
 
     state.selectedCabinetId = card.dataset.id;
 
-    // Atualiza o estado visual de seleção de todos os cards atualmente visíveis
     const allCards = DOM.grid.querySelectorAll('.cabinet-card');
     allCards.forEach(c => {
         c.setAttribute('aria-checked', c === card ? 'true' : 'false');
@@ -462,7 +244,7 @@ function calculateAndShowEstimate(linearFeet) {
 function resetApp() {
     state.selectedCabinetId = null;
     state.linearFeet = 0;
-    state.activeFilter = 'all'; // Reseta o filtro para todos
+    state.activeFilter = 'all';
 
     DOM.form.reset();
     renderFilterButtons();
