@@ -768,6 +768,8 @@
 
   <script src="./js/main.js" type="module" async></script>
 
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
   <!-- =========================================================
     5. FAVICONS
   ========================================================== -->
@@ -2456,6 +2458,17 @@
   <script src="./js/navigation.js" defer></script>
   <script src="./js/carousel.js" defer></script>
   <script src="./js/testimonials.js" defer></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
