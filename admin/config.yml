@@ -45,21 +45,27 @@ collections:
               - { label: "Alt Text (SEO)", name: "alt", widget: "string" }
 
       # ==========================================
-      # 2. CABINETS CATALOG
+      # 2. CABINETS CATALOG (Agrupado por Série)
       # ==========================================
       - file: "content/cabinets.json"
         label: "Cabinets Catalog"
         name: "cabinets"
         fields:
-          - label: "Cabinets List"
-            name: "cabinets"
+          - label: "Cabinet Series"
+            name: "series_list"
             widget: "list"
-            summary: "[{{fields.id}}] {{fields.name}} - ${{fields.pricePerFoot}}/ft"
+            summary: "Série: {{fields.series_name}}"
             fields:
-              - { label: "Cabinet ID", name: "id", widget: "string", required: false, hint: "E.g., sjg (Leave blank to generate automatically)" }
-              - { label: "Cabinet Name", name: "name", widget: "string", hint: "E.g., Shaker Jade Green" }
-              - { label: "Series", name: "series", widget: "string", hint: "E.g., Shaker Series" }
-              - { label: "Price Per Foot ($)", name: "pricePerFoot", widget: "number", value_type: "int", hint: "E.g., 225" }
-              - { label: "Upload Image", name: "image", widget: "image", required: false }
-              - { label: "OR Image URL", name: "image_url", widget: "string", required: false }
-              - { label: "Alt Text (SEO)", name: "alt", widget: "string" }
+              - { label: "Series Name", name: "series_name", widget: "string", hint: "Ex: Shaker Series" }
+              
+              # Lista de gabinetes dentro desta série
+              - label: "Cabinets in this Series"
+                name: "cabinets"
+                widget: "list"
+                summary: "{{fields.name}} - ${{fields.pricePerFoot}}/ft"
+                fields:
+                  - { label: "Cabinet Name", name: "name", widget: "string", hint: "Ex: Shaker Jade Green" }
+                  - { label: "Price Per Foot ($)", name: "pricePerFoot", widget: "number", value_type: "int" }
+                  - { label: "Upload Image", name: "image", widget: "image", required: false }
+                  - { label: "OR Image URL", name: "image_url", widget: "string", required: false }
+                  - { label: "Alt Text (SEO)", name: "alt", widget: "string" }
