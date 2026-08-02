@@ -1,7 +1,7 @@
 /**
  * Cabinet Calculator & Lead Capture Logic
  * Vanilla JavaScript ES6+ implementation focused on performance.
- * Now fetching dynamic data from Decap CMS (/content/cabinets.json).
+ * Now fetching dynamic data from Decap CMS (/content/cabinets.json) grouped by series.
  */
 
 // 1. DYNAMIC DATA HOLDER
@@ -53,20 +53,23 @@ async function loadCabinetsFromCMS() {
 
         const data = await response.json();
 
-        // Map JSON items to match internal structure
-        cabinetModels = (data.cabinets || []).map(item => ({
-            id: item.id && item.id.trim() !== ''
-                ? item.id
-                : item.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
-            name: item.name,
-            series: item.series || 'General Series',
-            pricePerFoot: Number(item.pricePerFoot) || 0,
-            image: resolveCabinetImage(item),
-            alt: item.alt || item.name
-        }));
+        // Extrai os gabinetes das séries agrupadas mantendo o formato interno
+        cabinetModels = (data.series_list || []).flatMap(seriesGroup => {
+            const seriesName = seriesGroup.series_name || 'General Series';
+
+            return (seriesGroup.cabinets || []).map(item => ({
+                id: item.id && item.id.trim() !== ''
+                    ? item.id
+                    : item.name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+                name: item.name,
+                series: seriesName,
+                pricePerFoot: Number(item.pricePerFoot) || 0,
+                image: resolveCabinetImage(item),
+                alt: item.alt || item.name
+            }));
+        });
     } catch (error) {
         console.error('Error loading cabinet models from CMS:', error);
-        // Display user-friendly error in grid if fetch fails
         if (DOM.grid) {
             DOM.grid.innerHTML = '<p class="error-message">Unable to load cabinet styles. Please try again later.</p>';
         }
@@ -77,7 +80,6 @@ async function loadCabinetsFromCMS() {
 function renderFilterButtons() {
     if (!cabinetModels.length) return;
 
-    // Extract unique series dynamically
     const uniqueSeries = ['all', ...new Set(cabinetModels.map(m => m.series))];
     DOM.filtersContainer.innerHTML = '';
 
