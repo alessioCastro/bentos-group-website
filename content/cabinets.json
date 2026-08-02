@@ -1,193 +1,260 @@
 {
-  "cabinets": [
+  "series_list": [
     {
-      "name": "Shaker White",
-      "series": "Shaker Series",
-      "pricePerFoot": 175,
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-White-SW_1.png",
-      "alt": "Shaker White Cabinet from Shaker Series"
+      "series_name": "Shaker Series",
+      "cabinets": [
+        {
+          "name": "Shaker White",
+          "pricePerFoot": 175,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-White-SW_1.png",
+          "alt": "Shaker White Cabinet from Shaker Series"
+        },
+        {
+          "name": "Shaker Origami White",
+          "pricePerFoot": 175,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Origami-White_1.png",
+          "alt": "Shaker Origami White Cabinet from Shaker Series"
+        },
+        {
+          "name": "Shaker Gray",
+          "pricePerFoot": 175,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Gray-SG_1.png",
+          "alt": "Shaker Gray Cabinet from Shaker Series"
+        },
+        {
+          "name": "Shaker Pebble Gray",
+          "pricePerFoot": 190,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Pebble-Gray-PB_1.png",
+          "alt": "Shaker Pebble Gray Cabinet from Shaker Series"
+        },
+        {
+          "name": "Shaker Natural Wood",
+          "pricePerFoot": 215,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Natural-Wood-SNW_1.png",
+          "alt": "Shaker Natural Wood Cabinet from Shaker Series"
+        },
+        {
+          "name": "Shaker Charcoal Black",
+          "pricePerFoot": 220,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Charcoal-Black-CB_1.png",
+          "alt": "Shaker Charcoal Black Cabinet from Shaker Series"
+        },
+        {
+          "name": "Shaker Jade Green",
+          "pricePerFoot": 225,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/SJG-224x396.jpg",
+          "alt": "Shaker Jade Green Cabinet from Shaker Series"
+        },
+        {
+          "name": "Shaker Cotton Oak",
+          "pricePerFoot": 225,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/SCO-door-image.png",
+          "alt": "Shaker Cotton Oak Cabinet from Shaker Series"
+        }
+      ]
     },
     {
-      "name": "Shaker Origami White",
-      "series": "Shaker Series",
-      "pricePerFoot": 175,
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Origami-White_1.png",
-      "alt": "Shaker Origami White Cabinet from Shaker Series"
+      "series_name": "Inset Series",
+      "cabinets": [
+        {
+          "name": "Inset Origami White",
+          "pricePerFoot": 260,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/inset-origami-white.jpg",
+          "alt": "Inset Origami White Cabinet from Inset Series"
+        },
+        {
+          "name": "Inset Hazelnut Oak",
+          "pricePerFoot": 275,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/IHO---.jpg",
+          "alt": "Inset Hazelnut Oak Cabinet from Inset Series"
+        },
+        {
+          "name": "Inset Truffle Brown",
+          "pricePerFoot": 275,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/inset-truffle-brown.jpg",
+          "alt": "Inset Truffle Brown Cabinet from Inset Series"
+        }
+      ]
     },
     {
-      "name": "Shaker Gray",
-      "series": "Shaker Series",
-      "alt": "Shaker Gray Cabinet from Shaker Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Gray-SG_1.png",
-      "pricePerFoot": 175
+      "series_name": "Escada Series",
+      "cabinets": [
+        {
+          "name": "Escada White",
+          "pricePerFoot": 215,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-White-EW_1.png",
+          "alt": "Escada White Cabinet from Escada Series"
+        },
+        {
+          "name": "Escada Dove",
+          "pricePerFoot": 220,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-Dove-ED_1.png",
+          "alt": "Escada Dove Cabinet from Escada Series"
+        },
+        {
+          "name": "Escada Vintage Wood",
+          "pricePerFoot": 235,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-Vintage-Wood-EVW_1.png",
+          "alt": "Escada Vintage Wood Cabinet from Escada Series"
+        },
+        {
+          "name": "Escada Midnight Blue",
+          "pricePerFoot": 230,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-Midnight-Blue-EMB_1.png",
+          "alt": "Escada Midnight Blue Cabinet from Escada Series"
+        },
+        {
+          "name": "Escada Honey Mapple",
+          "pricePerFoot": 230,
+          "image": "https://roccabinetry.com/media/catalog/category/EHM-Door_1_.png",
+          "alt": "Escada Honey Mapple Cabinet from Escada Series"
+        }
+      ]
     },
     {
-      "name": "Shaker Pebble Gray",
-      "alt": "Shaker Pebble Gray Cabinet from Shaker Series",
-      "series": "Shaker Series",
-      "pricePerFoot": 190,
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Pebble-Gray-PB_1.png"
+      "series_name": "Newtown Series",
+      "cabinets": [
+        {
+          "name": "Newtown Origami White",
+          "pricePerFoot": 215,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/newtown-origami_1.png",
+          "alt": "Newtown Origami White Cabinet from Newtown Series"
+        },
+        {
+          "name": "Newtown Smoked Oak",
+          "pricePerFoot": 235,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Newtown-Smoked-Oak-new-offline_1.png",
+          "alt": "Newtown Smoked Oak Cabinet from Newtown Series"
+        },
+        {
+          "name": "Newtown Jade Green",
+          "pricePerFoot": 230,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/newtown-jade-green_1.png",
+          "alt": "Newtown Jade Green Cabinet from Newtown Series"
+        },
+        {
+          "name": "Newtown Charcoal Black",
+          "pricePerFoot": 230,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/newtown-charcoal-black_1.png",
+          "alt": "Newtown Charcoal Black Cabinet from Newtown Series"
+        },
+        {
+          "name": "Newtown Sage Gray",
+          "pricePerFoot": 220,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/nsg-available.png",
+          "alt": "Newtown Sage Gray Cabinet from Newtown Series"
+        },
+        {
+          "name": "Newtown Lakeside Blue",
+          "pricePerFoot": 230,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/NLB_1__1_1.png",
+          "alt": "Newtown Lakeside Blue Cabinet from Newtown Series"
+        },
+        {
+          "name": "Newtown Cotton Oak",
+          "pricePerFoot": 235,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/nco-coming-soon-new.png",
+          "alt": "Newtown Cotton Oak Cabinet from Newtown Series"
+        }
+      ]
     },
     {
-      "name": "Shaker Natural Wood",
-      "alt": "Shaker Natural Wood Cabinet from Shaker Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Natural-Wood-SNW_1.png",
-      "pricePerFoot": 215,
-      "series": "Shaker Series"
+      "series_name": "Belmont Series",
+      "cabinets": [
+        {
+          "name": "Belmont White",
+          "pricePerFoot": 195,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/belmont-white-feature.png",
+          "alt": "Belmont White Cabinet from Belmont Series"
+        },
+        {
+          "name": "Belmont Gray",
+          "pricePerFoot": 195,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/belmont-gray-features_1.png",
+          "alt": "Belmont Gray Cabinet from Belmont Series"
+        }
+      ]
     },
     {
-      "name": "Shaker Charcoal Black",
-      "pricePerFoot": 220,
-      "alt": "Shaker Charcoal Black Cabinet from Shaker Series",
-      "series": "Shaker Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Shaker-Charcoal-Black-CB_1.png"
+      "series_name": "Classic Series",
+      "cabinets": [
+        {
+          "name": "Classic White",
+          "pricePerFoot": 185,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/classic-white-cw-206x366_1.jpg",
+          "alt": "Classic White Cabinet from Classic Series"
+        },
+        {
+          "name": "Classic Chocolate",
+          "pricePerFoot": 205,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/classic-chocolate-cc-206x366_1.jpg",
+          "alt": "Classic Chocolate Cabinet from Classic Series"
+        }
+      ]
     },
     {
-      "name": "Shaker Jade Green",
-      "alt": "Shaker Jade Green Cabinet from Shaker Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/SJG-224x396.jpg",
-      "pricePerFoot": 225,
-      "series": "Shaker Series"
+      "series_name": "European Series",
+      "cabinets": [
+        {
+          "name": "Glossy White",
+          "pricePerFoot": 195,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/gw-label-new.png",
+          "alt": "Glossy White Cabinet from European Series"
+        },
+        {
+          "name": "Matte White",
+          "pricePerFoot": 195,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/matt-white-label-new.png",
+          "alt": "Matte White Cabinet from European Series"
+        },
+        {
+          "name": "Matte Blue",
+          "pricePerFoot": 210,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/matt-blue-label-new.png",
+          "alt": "Matte Blue Cabinet from European Series"
+        },
+        {
+          "name": "Matte Gray",
+          "pricePerFoot": 200,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/matt-gray-label-new.png",
+          "alt": "Matte Gray Cabinet from European Series"
+        },
+        {
+          "name": "Walnut",
+          "pricePerFoot": 230,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/brown-walnut-label-new.png",
+          "alt": "Walnut Cabinet from European Series"
+        },
+        {
+          "name": "Matte Charcoal Black",
+          "pricePerFoot": 220,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Matte-Charcoal-Black_1.png",
+          "alt": "Matte Charcoal Black Cabinet from European Series"
+        }
+      ]
     },
     {
-      "name": "Shaker Cotton Oak",
-      "alt": "Shaker Cotton Oak Cabinet from Shaker Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/SCO-door-image.png",
-      "pricePerFoot": 225,
-      "series": "Shaker Series"
-    },
-    {
-      "name": "Inset Origami White",
-      "alt": "Inset Origami White Cabinet from Inset Series",
-      "series": "Inset Series",
-      "pricePerFoot": 260,
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/inset-origami-white.jpg"
-    },
-    {
-      "name": "Inset Hazelnut Oak",
-      "series": "Inset Series",
-      "pricePerFoot": 275,
-      "alt": "Inset Hazelnut Oak Cabinet from Inset Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/IHO---.jpg"
-    },
-    {
-      "name": "Inset Truffle Brown",
-      "series": "Inset Series",
-      "alt": "Inset Truffle Brown Cabinet from Inset Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/inset-truffle-brown.jpg",
-      "pricePerFoot": 275
-    },
-    {
-      "name": "Escada White",
-      "pricePerFoot": 215,
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-White-EW_1.png",
-      "series": "Escada Series",
-      "alt": "Escada White Cabinet from Escada Series"
-    },
-    {
-      "name": "Escada Dove",
-      "pricePerFoot": 220,
-      "series": "Escada Series",
-      "alt": "Escada Dove Cabinet from Escada Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-Dove-ED_1.png"
-    },
-    {
-      "name": "Escada Vintage Wood",
-      "alt": "Escada Vintage Wood Cabinet from Escada Series",
-      "pricePerFoot": 235,
-      "series": "Escada Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-Vintage-Wood-EVW_1.png"
-    },
-    {
-      "name": "Escada Midnight Blue",
-      "series": "Escada Series",
-      "pricePerFoot": 230,
-      "alt": "Escada Midnight Blue Cabinet from Escada Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Escada-Midnight-Blue-EMB_1.png"
-    },
-    {
-      "name": "Escada Honey Mapple",
-      "alt": "Escada Honey Mapple Cabinet from Escada Series",
-      "series": "Escada Series",
-      "pricePerFoot": 230,
-      "image": "https://roccabinetry.com/media/catalog/category/EHM-Door_1_.png"
-    },
-    {
-      "name": "Newtown Origami White",
-      "series": "Newtown Series",
-      "pricePerFoot": 215,
-      "alt": "Newtown Origami White Cabinet from Newton Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/newtown-origami_1.png"
-    },
-    {
-      "name": "Newtown Smoked Oak",
-      "alt": "Newtown Smoked Oak Cabinet from Newtown Series",
-      "series": "Newtown Series",
-      "pricePerFoot": 235,
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/Newtown-Smoked-Oak-new-offline_1.png"
-    },
-    {
-      "name": "Newtown Jade Green",
-      "series": "Newtown Series",
-      "pricePerFoot": 230,
-      "alt": "Newtown Jade Green Cabinet from Newton Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/newtown-jade-green_1.png"
-    },
-    {
-      "name": "Newtown Charcoal Black",
-      "series": "Newtown Series",
-      "pricePerFoot": 230,
-      "alt": "Newtown Charcoal Black Cabinet from Newton Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/newtown-charcoal-black_1.png"
-    },
-    {
-      "name": "Newtown Sage Gray",
-      "series": "Newtown Series",
-      "alt": "Newtown Sage Gray Cabinet from Newton Series",
-      "pricePerFoot": 220,
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/nsg-available.png"
-    },
-    {
-      "name": "Newtown Lakeside Blue",
-      "alt": "Newtown Lakeside Blue Cabinet from Newton Series",
-      "series": "Newton Series",
-      "pricePerFoot": 230,
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/NLB_1__1_1.png"
-    },
-    {
-      "name": "Newtown Cotton Oak",
-      "series": "Newtown Series",
-      "pricePerFoot": 235,
-      "alt": "Newtown Cotton Oak Cabinet from Newton Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/nco-coming-soon-new.png"
-    },
-    {
-      "name": "Belmont White",
-      "series": "Belmont Series",
-      "pricePerFoot": 195,
-      "alt": "Belmont White Cabinet from Belmont Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/belmont-white-feature.png"
-    },
-    {
-      "name": "Belmont Gray",
-      "series": "Belmont Series",
-      "alt": "Belmont Gray Cabinet from Belmont Series",
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/belmont-gray-features_1.png",
-      "pricePerFoot": 195
-    },
-    {
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/classic-white-cw-206x366_1.jpg",
-      "name": "Classic White",
-      "series": "Classic Series",
-      "alt": "Classic White Cabinet from Classic Series",
-      "pricePerFoot": 185
-    },
-    {
-      "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/classic-chocolate-cc-206x366_1.jpg",
-      "name": "Classic Chocolate",
-      "series": "Classic Series",
-      "alt": "Classic Chocolate Cabinet from Classic Series",
-      "pricePerFoot": 205
+      "series_name": "Closet Series",
+      "cabinets": [
+        {
+          "name": "Soft White",
+          "pricePerFoot": 160,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/closet-series-white_1.png",
+          "alt": "Soft White Cabinet from Closet Series"
+        },
+        {
+          "name": "Ashton Oak",
+          "pricePerFoot": 180,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/closet-series-wood_1.png",
+          "alt": "Ashton Oak Cabinet from Closet Series"
+        },
+        {
+          "name": "Slate Oak",
+          "pricePerFoot": 180,
+          "image": "https://d11847v46nrhkc.cloudfront.net/media/wysiwyg/closet-series-grey_1.png",
+          "alt": "Slate Oak Cabinet from Closet Series"
+        }
+      ]
     }
   ]
 }
